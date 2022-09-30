@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Mahdiyar Ali Akbar Alavi | Résumé</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #F5F5F5;
+        }
+        /* Change */
+        nav {
+            width: 1000px;
+            padding: 25px;
+            margin: 0 auto;
+            /* background-color: red; */
+        }
+        nav > ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        main {
+            background-color: white;
+            width: 1000px;
+            padding: 25px;
+            /* Change */
+            margin: 0 auto 25px auto;
+            box-shadow: 0 0 1px 0 #999;
+        }
+        header {
+            margin-bottom: 10px;
+        }
+        h1 {
+            margin: 0;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-bottom: 15px;
+        }
+        #contact {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            justify-content: space-evenly;
+        }
+        a {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: dodgerblue;
+            text-decoration: none;
+            font-weight: normal;
+        }
+        h3 {
+            margin: 0;
+            line-height: 30px;
+        }
+        h3:not(#relevant-courses-h3) {
+            display: flex;
+            justify-content: space-between;
+        }
+        #relevant-courses-h3 {
+            display: flex;
+            justify-content: start;
+        }
+        h3 > small {
+            font-weight: 100;
+            font-style: italic;
+        }
+        h3 > p {
+            font-size: small;
+            font-weight: 100;
+            margin: 0 0 0 5px;
+            padding: 0;
+            bottom: -1px;
+            position: relative;
+        }
+        section {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        section:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        section > h3 {
+            margin: 0;
+            line-height: 30px;
+            border-bottom: 1px solid black;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #bachelor > ul, #high-school > ul {
+            line-height: 25px;
+            margin: 0;
+            list-style-type: none;
+            padding: 0;
+        }
+        .major-title {
+            display: flex;
+            justify-content: space-between;
+        }
+        .major-details {
+            list-style-type: disc;
+        }
+        #research-interests > ul {
+            line-height: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 5px 0 0 0;
+        }
+        #relevant-courses > div, #programming-skills > ul {
+            line-height: 20px;
+            margin: 5px 0 0 0;
+        }
+        #relevant-courses > div > ul {
+            display: grid;
+            margin: 0;
+        }
+        #relevant-courses > div > ul:not(:last-child) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        #relevant-courses > div > ul:last-child {
+            grid-template-columns: 1fr;
+        }
+        #programming-skills > ul {
+            display: grid;
+            grid-template-columns: 2fr 2fr 1fr;
+        }
+        #research-experience-and-notable-projects > ul, #teaching-assistant-experience > ul, #work-experience > ul, #licenses-and-certificates > ul, #languages > ul {
+            line-height: 25px;
+            margin: 5px 0 0 0;
+        }
+        #research-experience-and-notable-projects > ul > li {
+            margin-bottom: 10px;
+        }
+        .column > p {
+            margin: 0;
+            text-align: justify !important;
+        }
+        #honors-and-awards > ul {
+            line-height: 20px;
+            margin: 5px 0 0 0;
+        }
+        #references > p {
+            line-height: 25px;
+            margin: 5px 0 0 0;
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+        }
+        .column {
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+        }
+        .column > *:nth-child(odd) {
+            text-align: start;
+        }
+        .column > *:nth-child(even) {
+            text-align: end;
+        }
+        .column > span > h4 {
+            margin: 0;
+            padding: 0;
+            display: inline;
+        }
+        .item > span > a, .column > span > a {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #honors-and-awards > ul > li > .column {
+            grid-template-columns: 5fr 1fr;
+        }
+        ::selection {
+            background-color: #DADADA;
+        }
+        .abnormal, .weird {
+            display: none;
+        }
+        details {
+            display: none;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        details > p {
+            margin: 0;
+            text-align: justify;
+        }
+        .useless {
+            display: none;
+        }
+
+        /* medium */
+        @media screen and (max-width: 1100px) {
+            nav {
+                width: 800px;
+                padding: 20px;
+            }
+            main {
+                width: 800px;
+                padding: 20px;
+                margin: 0 auto 20px auto;
+            }
+            #relevant-courses > div > ul:not(:last-child) {
+                grid-template-columns: 1fr 1fr;
+            }
+            .column {
+                grid-template-columns: 3fr 1fr;
+            }
+            .medium {
+                grid-template-columns: 4fr 1fr;
+            }
+            .medium-paragraph {
+                grid-template-columns: 9fr 1fr;
+            }
+            #programming-skills > ul {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* small - .normal vs .abnormal */
+        @media screen and (max-width: 900px) {
+            nav {
+                width: 600px;
+                padding: 15px;
+            }
+            main {
+                width: 600px;
+                padding: 15px;
+                margin: 0 auto 15px auto;
+            }
+            #contact {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            #contact > li {
+                line-height: 25px;
+            }
+            .column {
+                grid-template-columns: 8fr 5fr;
+            }
+            .small {
+                grid-template-columns: 3fr 1fr;
+            }
+            .small-paragraph {
+                grid-template-columns: 7fr 1fr;
+            }
+            .special-small {
+                grid-template-columns: 4fr 1fr;
+            }
+            #programming-skills > ul {
+                grid-template-columns: 2fr 1fr;
+            }
+            .abnormal {
+                display: unset;
+            }
+            .normal {
+                display: none;
+            }
+        }
+
+        /* smaller - .ordinary vs .weird */
+        @media screen and (max-width: 700px) {
+            nav {
+                width: 400px;
+                padding: 10px;
+            }
+            header {
+                margin-bottom: 0;
+            }
+            h1 {
+                margin-bottom: 5px;
+            }
+            main {
+                width: 400px;
+                padding: 10px;
+                margin: 0 auto 10px auto;
+            }
+            #contact {
+                grid-template-columns: 3fr 2fr;
+            }
+            .column {
+                grid-template-columns: 7fr 1fr;
+            }
+            #programming-skills > ul {
+                grid-template-columns: 1fr;
+            }
+            #relevant-courses > div > ul:not(:last-child) {
+                grid-template-columns: 1fr;
+            }
+            .smaller-paragraph {
+                grid-template-columns: 10fr 1fr;
+            }
+            ul {
+                padding-left: 25px;
+            }
+            .weird {
+                display: unset;
+            }
+            .ordinary {
+                display: none;
+            }
+            details {
+                display: unset;
+            }
+            .smaller-paragraph > p {
+                display: none;
+            }
+            details + span {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="https://mhdr3a.github.io"><i class="fa fa-mail-reply"></i> Return</a>
+            </li>
+            <li>
+                <a href="https://mhdr3a.github.io/files/Mahdiyar_AliAkbarAlavi_Résumé.pdf"><i class="fa fa-download"></i> Download My Résumé</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <header>
+            <h1>Mahdiyar Ali Akbar Alavi</h1>
+            <ul id="contact">
+                <li id="email">
+                    <i class="fa fa-envelope-o"></i>
+                    <a href="mailto:mahdiyar.edu@gmail.com">mahdiyar.edu@gmail.com</a>
+                </li>
+                <li id="website">
+                    <i class="fa fa-globe"></i>
+                    <a href="https://mhdr3a.github.io">Personal Website</a>
+                </li>
+                <li id="linkedin">
+                    <i class="fa fa-linkedin-square"></i>
+                    <a href="https://www.linkedin.com/in/mahdiyar-alavi/">LinkedIn Profile</a>
+                </li>
+                <li id="github">
+                    <i class="fa fa-github"></i>
+                    <a href="https://github.com/mhdr3a">GitHub Page</a>
+                </li>
+            </ul>
+        </header>
+        <section id="education">
+            <h3>Education</h3>
+            <div id="bachelor">
+                <h3>
+                    <span>University of Tehran</span>
+                    <small>Tehran, Iran</small>
+                </h3>
+                <ul>
+                    <li>
+                        <div class="major-title">
+                            <i>Bachelor of Science in Electrical Engineering</i>
+                            <b><span class="ordinary">September 2017 - July 2022</span><span class="weird">2017 - 2022</span></b>
+                        </div>
+                        <ul class="major-details">
+                            <li>
+                                <span>Overall GPA:</span>
+                                <b>16.75/20 (3.52/4)</b>
+                            </li>
+                            <li>
+                                <span>GPA of Last 2 Years:</span>
+                                <b>17.75/20 (3.79/4)</b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="major-title">
+                            <i>Minor in Computer Engineering</i>
+                            <b><span class="ordinary">September 2019 - February 2022</span><span class="weird">2019 - 2022</span></b>
+                        </div>
+                        <ul class="major-details">
+                            <li>
+                                <span>Overall GPA:</span>
+                                <b>18.29/20 (3.8/4)</b>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="high-school">
+                <h3>
+                    <span><span class="ordinary">National Organization for Development of Exceptional Talents</span><span class="weird">NODET</span></span>
+                    <small>Tehran, Iran</small>
+                </h3>
+                <ul>
+                    <li>
+                        <div class="major-title">
+                            <i>Diploma in Mathematics and Physics Discipline</i>
+                            <b><span class="ordinary">September 2013 - June 2017</span><span class="weird">2013 - 2017</span></b>
+                        </div>
+                        <ul class="major-details">
+                            <li>
+                                <span>Overall GPA:</span>
+                                <b>4/4</b>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="research-interests">
+            <h3>Research Interests</h3>
+            <ul>
+                <li>Machine Learning</li>
+                <li>Deep Learning</li>
+                <li><span class="ordinary">Natural Language Processing</span><span class="weird">NLP</span></li>
+                <li>Machine Vision</li>
+                <li>Optimization</li>
+                <li>Human-Robot Interaction</li>
+            </ul>
+        </section>
+        <section id="relevant-courses">
+            <h3 id="relevant-courses-h3">
+                <span>Relevant Courses</span>
+                <p>(Graduate courses are indicated by &#10013;)</p>
+            </h3>
+            <div>
+                <ul>
+                    <li>Artificial Intelligence<sup></sup> | <b>Score:</b> 19.75/20</li>
+                    <li>Neural Networks<sup>&#10013;</sup> | <b>Score:</b> 16/20</li>
+                    <li>Linear Algebra<sup></sup> | <b>Score:</b> 18.7/20</li>
+                    <li>Operational Research<sup></sup> | <b>Score:</b> 18/20</li>
+                    <li>Advanced Programming<sup></sup> | <b>Score:</b> 19/20</li>
+                    <li>Data Structures<sup></sup> | <b>Score:</b> 20/20</li>
+                    <li>Discrete Mathematics<sup></sup> | <b>Score:</b> 17.2/20</li>
+                    <li>Operating Systems<sup></sup> | <b>Score:</b> 17.1/20</li>
+                    <li>Computer Architecture<sup></sup> | <b>Score:</b> 19.3/20</li>
+                    <li>Modern Control Systems<sup></sup> | <b>Score:</b> 19.1/20</li>
+                    <li>Advanced Algorithms<sup></sup> | <i>Auditing</i></li>
+                    <li>Distributed Systems<sup></sup> | <i>Auditing</i></li>
+                </ul>
+                <ul>
+                    <li><span class="ordinary">Fundamentals of Mechatronics Engineering</span><span class="weird">Fund. of Mechatronics Eng.</span><sup></sup> | <b>Score:</b> 16.5/20</li>
+                </ul>
+            </div>
+        </section>
+        <section id="research-experience-and-notable-projects">
+            <h3>Research Experience and Notable Projects</h3>
+            <ul>
+                <li>
+                    <div class="column">
+                        <span><b>B.Sc. Thesis:</b> <i>Robustifying Deep NLP Models against Bias using Dataset Cartography</i></span>
+                        <b><span class="ordinary">February 2022 - July 2022</span><span class="weird">2022</span></b>
+                        <span><b>Supervisor:</b> <a href="https://scholar.google.com/citations?user=TvGqaqAAAAAJ&hl=en">Dr. Yadollah Yaghoobzadeh</a></span>
+                    </div>
+                    <div class="column medium-paragraph small-paragraph smaller-paragraph">
+                        <p>&emsp;Through Dataset Cartography, I fine-tuned RoBERTa-base and Bert-base-uncased models using various datasets in different ways; for example, first with the whole dataset and then with the most ambiguous samples of it; next, evaluated the models using prestigious evaluation sets, such as HANS and GLUE Diagnostic Dataset.<br />&emsp;Currently, I am working on a paper regarding this research.</p>
+                        <span class="useless"></span>
+                        <details>
+                            <summary>Description</summary>
+                            <p>&emsp;Through Dataset Cartography, I fine-tuned RoBERTa-base and Bert-base-uncased models using various datasets in different ways; for example, first with the whole dataset and then with the most ambiguous samples of it; next, evaluated the models using prestigious evaluation sets, such as HANS and GLUE Diagnostic Dataset.<br />&emsp;Currently, I am working on a paper regarding this research.</p>
+                        </details>
+                        <span></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column small">
+                        <span>Gesture-controlled Robot using Arduino and Python (MediaPipe)</span>
+                        <b><span class="ordinary">October 2022</span><span class="weird">2022</span></b>
+                        <span><b>Supervisor:</b> <a href="https://scholar.google.com/citations?user=gkiFy20AAAAJ&hl=en">Dr. Mehdi Tale Masouleh</a></span>
+                    </div>
+                    <div class="column medium-paragraph small-paragraph smaller-paragraph">
+                        <p>&emsp;I built a 4-wheel drive gesture-controlled mobile robot during the Arduino Instruction work experience at Robotech Academy. You can control this robot with simple hand gestures through Arduino Uno and Python MediaPipe Machine Vision library.<br />&emsp;This project was designed to assess students of the introductory robotics tutorial course.</p>
+                        <span class="useless"></span>
+                        <details>
+                            <summary>Description</summary>
+                            <p>&emsp;I built a 4-wheel drive gesture-controlled mobile robot during the Arduino Instruction work experience at Robotech Academy. You can control this robot with simple hand gestures through Arduino Uno and Python MediaPipe Machine Vision library.<br />&emsp;This project was designed to assess students of the introductory robotics tutorial course.</p>
+                        </details>
+                        <span></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column special-small">
+                        <span>Solving a Linear Programming Problem (Optimal Vehicle Routing) using Python (PuLP)</span>
+                        <b><span class="ordinary">February 2022</span><span class="weird">2022</span></b>
+                        <span><b>Course Title:</b> <span>Operational Research</span></span>
+                    </div>
+                    <div class="column medium-paragraph small-paragraph smaller-paragraph">
+                        <p>&emsp;First, a dataset was collected through Google Maps, which included ten famous sites in Tehran. Then, inspired by the Network Flow Problem, I coded a Python script using Linear Programming to find the shortest path between two arbitrary given places in the dataset.</p>
+                        <span class="useless"></span>
+                        <details>
+                            <summary>Description</summary>
+                            <p>&emsp;First, a dataset was collected through Google Maps, which included ten famous sites in Tehran. Then, inspired by the Network Flow Problem, I coded a Python script using Linear Programming to find the shortest path between two arbitrary given places in the dataset.</p>
+                        </details>
+                        <span></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column small">
+                        <span>An Instagram Bot (InstaCrawler) for Automatic Data Collection using Python (Selenium)</span>
+                        <b><span class="ordinary">September 2021</span><span class="weird">2021</span></b>
+                        <span><b>Supervisor:</b> <a href="https://scholar.google.com/citations?user=zqa4EY0AAAAJ&hl=en">Dr. Reshad Hosseini</a></span>
+                    </div>
+                    <div class="column medium-paragraph small-paragraph smaller-paragraph">
+                        <p>&emsp;During my internship at HARA AI, I developed a Python module using the Selenium library, which was able to log into the Instagram website, like new posts, visit unseen stories, and download pictures. Collected pictures could then be used to train deep learning models in the field of Machine Vision.<br />&emsp;This project's most challenging part was making the bot behave like ordinary users, as the Instagram website can easily detect unusual behaviors and ban automatic data collectors.</p>
+                        <span class="useless"></span>
+                        <details>
+                            <summary>Description</summary>
+                            <p>&emsp;During my internship at HARA AI, I developed a Python module using the Selenium library, which was able to log into the Instagram website, like new posts, visit unseen stories, and download pictures. Collected pictures could then be used to train deep learning models in the field of Machine Vision.<br />&emsp;This project's most challenging part was making the bot behave like ordinary users, as the Instagram website can easily detect unusual behaviors and ban automatic data collectors.</p>
+                        </details>
+                        <span></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column special-small">
+                        <span>Race Recognition using Artificial Neural Networks in Python (Keras)</span>
+                        <b><span class="ordinary">June 2021</span><span class="weird">2021</span></b>
+                        <span><b>Course Title:</b> <span>Artificial Intelligence</span></span>
+                    </div>
+                    <div class="column medium-paragraph small-paragraph smaller-paragraph">
+                        <p>&emsp;In the first phase of this project, I analyzed the UTKFace dataset through the Pandas, Seaborn, and PyPlot libraries. Then, I prepared the data for the training process and trained an artificial neural network with the processed data using the Keras API. This model could predict each person's ethnicity by having their face image. Afterward, I tried to enhance the accuracy of predictions by changing different training parameters, such as the optimizer function or the kernel regularizer. In the last phase, I used the test data (30% of the dataset) to evaluate the model, which indicated an accuracy of 71%.</p>
+                        <span class="useless"></span>
+                        <details>
+                            <summary>Description</summary>
+                            <p>&emsp;In the first phase of this project, I analyzed the UTKFace dataset through the Pandas, Seaborn, and PyPlot libraries. Then, I prepared the data for the training process and trained an artificial neural network with the processed data using the Keras API. This model could predict each person's ethnicity by having their face image. Afterward, I tried to enhance the accuracy of predictions by changing different training parameters, such as the optimizer function or the kernel regularizer. In the last phase, I used the test data (30% of the dataset) to evaluate the model, which indicated an accuracy of 71%.</p>
+                        </details>
+                        <span></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column">
+                        <span>House Price Prediction using Multithreading in C++ (PThread)</span>
+                        <b><span class="ordinary">June 2021</span><span class="weird">2021</span></b>
+                        <span><b>Course Title:</b> <span>Operating Systems</span></span>
+                    </div>
+                    <!-- <div class="column medium-paragraph small-paragraph smaller-paragraph">
+                        <p>&emsp;</p>
+                        <span class="useless"></span>
+                        <details>
+                            <summary>Description</summary>
+                            <p>&emsp;</p>
+                        </details>
+                        <span></span>
+                    </div> -->
+                </li>
+                <li>
+                    <div class="column">
+                        <span>Multi-cycle Stack-based Processor Design in Verilog</span>
+                        <b><span class="ordinary">May 2021</span><span class="weird">2021</span></b>
+                        <span><b>Course Title:</b> <span>Computer Architecture (Digital Systems II)</span></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column special-small">
+                        <span>Classification of Persian (Farsi) Books using Naïve Bayes Classifier in Python</span>
+                        <b><span class="ordinary">May 2021</span><span class="weird">2021</span></b>
+                        <span><b>Course Title:</b> <span>Artificial Intelligence</span></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column special-small">
+                        <span>Image Restoration using Discrete Hopfield Network in Python</span>
+                        <b><span class="ordinary">December 2020</span><span class="weird">2020</span></b>
+                        <span><b>Course Title:</b> <span>Neural Networks</span></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column medium special-small">
+                        <span>A Two-Player Computer Game (Soccer Stars) using Object-Oriented Programming in C++</span>
+                        <b><span class="ordinary">November 2020</span><span class="weird">2020</span></b>
+                        <span><b>Course Title:</b> <span>Advanced Programming</span></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column">
+                        <span>Document Detection using MATLAB</span>
+                        <b><span class="ordinary">August 2020</span><span class="weird">2020</span></b>
+                        <span><b>Course Title:</b> <span>Digital Signal Processing (DSP)</span></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column">
+                        <span>Red-Black Tree Implementation using Python</span>
+                        <b><span class="ordinary">July 2020</span><span class="weird">2020</span></b>
+                        <span><b>Course Title:</b> <span>Data Structures and Algorithms</span></span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="teaching-assistant-experience">
+            <h3>Teaching Assistant Experience</h3>
+            <ul>
+                <li>
+                    <div class="column special-small">
+                        <span>Fundamentals of Mechatronics Engineering | <b class="normal">Role:</b> Teaching Assistant</span>
+                        <b><span class="ordinary">Spring 2022</span><span class="weird">2022</span></b>
+                        <span><b>Instructor:</b> <a href="https://scholar.google.com/citations?user=gkiFy20AAAAJ&hl=en">Dr. Mehdi Tale Masouleh</a></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column special-small">
+                        <span>Computer Architecture (Digital Systems II) | <b class="normal">Role:</b> Teaching Assistant</span>
+                        <b><span class="ordinary">Spring 2022</span><span class="weird">2022</span></b>
+                        <span><b>Instructor:</b> <a href="https://scholar.google.com/citations?user=wE5ee_kAAAAJ&hl=en">Dr. Saeed Safari</a></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column special-small">
+                        <span>Computer Architecture Laboratory | <b class="normal">Role:</b> Laboratory Assistant Instructor</span>
+                        <b><span class="ordinary">Spring 2022</span><span class="weird">2022</span></b>
+                        <span><b>Instructor:</b> <a href="https://scholar.google.com/citations?user=wE5ee_kAAAAJ&hl=en">Dr. Saeed Safari</a></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column">
+                        <span>Modern Control Systems | <b class="normal">Role:</b> Teaching Assistant</span>
+                        <b><span class="ordinary">Fall 2021</span><span class="weird">2021</span></b>
+                        <span><b>Instructor:</b> <a href="https://scholar.google.com/citations?user=eDseLNYAAAAJ&hl=en">Dr. Hamed Kebriaei</a></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column medium small">
+                        <span>Introduction to Computing Systems and Programming | <b class="normal">Role:</b> Supervising Teaching Assistant</span>
+                        <b><span class="ordinary">Fall 2021</span><span class="weird">2021</span></b>
+                        <span><b>Instructors:</b> <a href="https://scholar.google.com/citations?user=6-6ZdxMAAAAJ&hl=en">Dr. Hadi Moradi</a> and <a href="https://scholar.google.com/citations?user=oVAT1lYAAAAJ&hl=en">Dr. Mostafa Tavassolipour</a></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column special-small">
+                        <span>Electrical Measurement Laboratory I | <b class="normal">Role:</b> Laboratory Assistant Instructor</span>
+                        <b><span class="ordinary">Fall 2018</span><span class="weird">2018</span></b>
+                        <span><b>Instructor:</b> <a href="https://scholar.google.com/citations?user=Ta7REBYAAAAJ&hl=en">Dr. Hossein Iman-Eini</a></span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="work-experience">
+            <h3>Work Experience</h3>
+            <ul>
+                <li>
+                    <div class="column small">
+                        <span><h4>Robotech Academy</h4> | <b>Role:</b> Part-time Arduino Instructor</span>
+                        <b><span class="ordinary">June 2022 - Present</span><span class="weird">Present</span></b>
+                        <span><b>Description:</b> We are preparing an introductory robotics tutorial course, and I undertake the Arduino instruction part.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column">
+                        <span><h4>Karyar College</h4> | <b>Role:</b> Volunteer Front-end Development Teaching Assistant</span>
+                        <b><span class="ordinary">August 2021 - October 2021</span><span class="weird">2021</span></b>
+                        <span><b>Description:</b> I used to hold weekly Q&A sessions for students who were learning front-end development.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="column">
+                        <span><h4>HARA AI</h4> | <b>Role:</b> Part-time Summer Intern</span>
+                        <b><span class="ordinary">July 2021 - August 2021</span><span class="weird">2021</span></b>
+                        <span><b>Description:</b> I created a Python module (InstaCrawler) to automatically collect data from Instagram.</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="honors-and-awards">
+            <h3>Honors and Awards</h3>
+            <ul>
+                <li>
+                    <div class="column">
+                        <span>Ranked 533<sup>rd</sup> among 148,000 contestants in National University Entrance Exam in the field of Mathematics and Physics</span>
+                        <b><span class="ordinary">July 2017</span><span class="weird">2017</span><sup></sup></b>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="licenses-and-certificates">
+            <h3>Licenses and Certificates</h3>
+            <ul>
+                <li>
+                    <div class="column medium">
+                        <span><i>Natural Language Processing in Python Track</i> | <b>Presented by:</b> <a href="https://www.datacamp.com/">DataCamp</a> | <a href="https://mhdr3a.github.io/pics/datacamp.png">View Certificate</a></span>
+                        <b><span class="ordinary">March 2022</span><span class="weird">2022</span></b>
+                    </div>
+                </li>
+                <li>
+                    <div class="column special-small">
+                        <span><i>Intro to Machine Learning</i> | <b>Presented by:</b> <a href="https://www.kaggle.com/">Kaggle</a> | <a href="https://mhdr3a.github.io/pics/kaggle.png">View Certificate</a></span>
+                        <b><span class="ordinary">September 2021</span><span class="weird">2021</span></b>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="programming-skills">
+            <h3>Programming Skills</h3>
+            <ul>
+                <li>
+                    <div class="item">
+                        <span>Python (Selenium, PuLP, NumPy, Pandas, and Keras)</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <span>MATLAB</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <span><span class="normal">Verilog HDL</span><span class="abnormal">C/C++ (Object-Oriented Programming)</span></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <span><span class="abnormal">Verilog HDL</span><span class="normal">C/C++ (Object-Oriented Programming)</span></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <span>Front-end Development (HTML/CSS/jQuery)</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <span>Arduino</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="languages">
+            <h3>Languages</h3>
+            <ul>
+                <li>
+                    <div class="item">
+                        <span>Persian (Farsi) | Native</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <span>English | Advanced</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <span>French | Elementary</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="references">
+            <h3>References</h3>
+            <p>Available upon request.</p>
+        </section>
+    </main>
+    
+</body>
+</html>
