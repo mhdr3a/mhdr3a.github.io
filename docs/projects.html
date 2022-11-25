@@ -1,0 +1,534 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Mahdiyar Ali Akbar Alavi | Projects</title>
+    <style>
+        :root {
+            --header-height: 30px;
+            --profile-picture-dim: 250px;
+        }
+        body {
+            margin: 0;
+            background-color: #F5F5F5;
+            padding: 25px 125px 25px 125px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        header {
+            height: var(--header-height);
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+        }
+        header > h2 {
+            margin: 0;
+            line-height: var(--header-height);
+        }
+        header > ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: inherit;
+            justify-content: space-between;
+            list-style-type: none;
+        }
+        header > ul > li {
+            height: inherit;
+            line-height: var(--header-height);
+        }
+        header > ul > li > a, .active-page {
+            color: #666;
+            line-height: var(--header-height);
+            height: inherit;
+            display: block;
+            text-decoration: none;
+            /* Temporary Changes */
+            transition: outline .25s, background-color .25s, color .25s;
+        }
+        header > ul > li > a:hover {
+            color: #333;
+        }
+        .active-page {
+            color: #333;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            column-gap: 50px;
+        }
+        aside {
+            display: grid;
+            grid-template-rows: 3.15fr 0.75fr 0.5fr;
+        }
+        #profile-picture-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #profile-picture {
+            height: var(--profile-picture-dim);
+            width: var(--profile-picture-dim);
+            border-radius: var(--profile-picture-dim);
+            background-image: url(pics/profile-picture.jpg);
+            filter: grayscale(1);
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: filter .25s;
+        }
+        #profile-picture:hover {
+            filter: grayscale(0);
+        }
+        #personal-information-container > h2, #personal-information-container > h3 {
+            margin: 0;
+            text-align: center;
+            line-height: var(--header-height);
+            color: #333;
+        }
+        .normal-text {
+            font-weight: normal;
+            font-size: 1em;
+        }
+        #location > span {
+            padding-left: 5px;
+        }
+        #contact-information {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer {
+            display: none;
+        }
+        #contact-information > ul, footer > ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-evenly;
+            width: 50%;
+        }
+        #contact-information > ul > li > a, footer > ul > li > a {
+            font-size: 1.75em;
+            color: #666;
+            transition: color .25s;
+        }
+        #contact-information > ul > li > a.envelope:hover, footer > ul > li > a.envelope:hover {
+            color: #0F9D58;
+        }
+        #contact-information > ul > li > a.github:hover, footer > ul > li > a.github:hover {
+            color: #131416;
+        }
+        #contact-information > ul > li > a.linkedin:hover, footer > ul > li > a.linkedin:hover {
+            color: #0077B5;
+        }
+        #contact-information > ul > li > a.skype:hover, footer > ul > li > a.skype:hover {
+            color: #00AFF0;
+        }
+
+        section {
+            padding-top: 25px;
+            /* background-color: red; */
+        }
+        #greetings > h2, #greetings > h3 {
+            margin: 0;
+            color: #333;
+            line-height: var(--header-height);
+        }
+        #professional-summary {
+            margin-top: 10px;
+        }
+        #professional-summary > p {
+            margin: 0;
+            text-indent: 1.5em;
+            text-align: justify;
+            line-height: 25px;
+            letter-spacing: 1px;
+            color: #333;
+        }
+        ::selection {
+            background-color: #DADADA;
+        }
+
+        /* Temporary Changes */
+        #temp-header-ul {
+            justify-content: flex-end;
+        }
+        #temp-header-ul > li > a {
+            outline: 1px solid #666;
+            padding: 0 5px 0 5px;
+        }
+        #temp-header-ul > li > a.normal, #temp-header-ul > li > a.abnormal {
+            margin-left: 15px;
+        }
+        #temp-header-ul > li > a:hover {
+            outline: 1px solid #666;
+            background-color: #EEE;
+        }
+        .abnormal {
+            display: none;
+        }
+
+        /* #location {
+            background-color: pink;
+        }
+        #profile-picture-container {
+            background-color: red;
+        }
+        #personal-information-container {
+            background-color: blue;
+        } */
+
+        @media screen and (max-width: 1150px) {
+            body {
+                padding: 20px 75px 20px 75px;
+            }
+        }
+        
+        @media screen and (max-width: 1050px) {
+            body {
+                padding: 15px 25px 15px 25px;
+            }
+            main {
+                grid-gap: 25px;
+            }
+            #professional-summary {
+                margin-top: 15px;
+            }
+        }
+
+        @media screen and (max-width: 950px) {
+            body {
+                padding: 5px 25px 5px 25px;
+            }
+            /* Temporary Changes */
+            /* header {
+                grid-template-columns: 2fr 3fr 2fr;
+            } */
+            header {
+                grid-template-columns: 1fr;
+            }
+            #professional-summary {
+                margin-top: 15px;
+            }
+            #professional-summary > iframe {
+                width: 460;
+                height: 258.75;
+            }
+            #personal-information-container > h2, #greetings > h2 {
+                font-size: 1.25em;
+            }
+            #personal-information-container > h3, #greetings > h3 {
+                font-size: 1em;
+            }
+            .normal-text {
+                font-size: .9em;
+            }
+            #contact-information > ul, footer > ul {
+                width: 60%;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            aside {
+                grid-template-rows: 3.15fr 0.75fr 0.5fr 0.65fr;
+            }
+        }
+
+        /* Smaller Screens */
+
+        @media screen and (max-width: 750px) {
+            body {
+                padding: 5px 15px 5px 15px;
+            }
+            /* Temporary Changes */
+            /* header {
+                grid-template-columns: 1fr 2fr 1fr;
+            } */
+            main {
+                padding: 0 15px 0 15px;
+                grid-template-columns: 1fr;
+                grid-gap: 0;
+            }
+            #professional-summary {
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+            }
+            #professional-summary > iframe {
+                width: 360;
+                height: 202.5;
+            }
+            #contact-information {
+                display: none;
+            }
+            footer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px 0 20px 0;
+            }
+            footer > ul {
+                width: 25%;
+            }
+            aside {
+                grid-template-rows: 3.15fr 0.75fr;
+            }
+            section {
+                padding-top: 15px;
+            }
+            #temp-header-ul > li > a.normal, #temp-header-ul > li > a.abnormal {
+                margin-left: 10px;
+            }
+        }
+
+        @media screen and (max-width: 650px) {
+            body {
+                padding: 5px 10px 5px 10px;
+            }
+            /* Temporary Changes */
+            /* header {
+                grid-template-columns: 1fr 3fr 1fr;
+            } */
+            footer {
+                margin: 15px 0 15px 0;
+            }
+            footer > ul {
+                width: 35%;
+            }
+            section {
+                padding-top: 10px;
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            .normal {
+                display: none;
+            }
+            .abnormal {
+                display: block;
+            }
+            body {
+                padding: 5px;
+            }
+            /* Temporary Changes */
+            /* header {
+                grid-template-columns: 1fr 10fr 1fr;
+            } */
+            header > ul {
+                justify-content: space-between;
+            }
+            #professional-summary {
+                margin-top: 5px;
+            }
+            #professional-summary > iframe {
+                width: 260;
+                height: 146.25;
+            }
+            #professional-summary > p {
+                letter-spacing: 0;
+            }
+            header > ul > li > a, .active-page {
+                font-size: .9em;
+            }
+            footer {
+                margin: 10px 0 10px 0;
+            }
+            footer > ul {
+                width: 40%;
+            }
+            section {
+                padding-top: 5px;
+            }
+            #temp-header-ul > li > a.normal, #temp-header-ul > li > a.abnormal {
+                margin-left: 5px;
+            }
+        }
+        @media screen and (max-width: 450px) {
+            #professional-summary > iframe {
+                width: 160;
+                height: 90;
+            }
+            #temp-header-ul > li > a.normal, #temp-header-ul > li > a.abnormal {
+                margin-left: 3px;
+            }
+        }
+        /* Larger Screens */
+
+        @media screen and (min-width: 1400px) {
+            :root {
+                --header-height: 33.63px;
+                --profile-picture-dim: 277.7px;
+            }
+            body {
+                padding: 28px 138.5px 28px 138.5px;
+            }
+            main {
+                grid-gap: 56px;
+            }
+            #personal-information-container > h2, #greetings > h2 {
+                font-size: 1.67em;
+            }
+            #personal-information-container > h3, #greetings > h3 {
+                font-size: 1.3em;
+            }
+            .normal-text {
+                font-size: 1.11em;
+            }
+            section {
+                padding-top: 27px;
+            }
+            #professional-summary {
+                margin-top: 28px;
+            }
+            #professional-summary > p {
+                text-indent: 1.5em;
+                line-height: 27.8px;
+                letter-spacing: 1.1px;
+            }
+            #location > span {
+                padding-left: 6px;
+                font-size: .85em;
+            }
+            #location > i {
+                font-size: .85em;
+            }
+            #contact-information > ul > li > a {
+                font-size: 1.95em;
+            }
+            aside {
+                grid-template-rows: 3.12fr 0.75fr 0.5fr;
+            }
+            /* Temporary Changes */
+            #temp-header-ul > li > a {
+                padding: 0 6px 0 6px;
+            }
+        }
+
+        @media screen and (min-width: 1500px) {
+            :root {
+                --header-height: 37px;
+                --profile-picture-dim: 312.5px;
+            }
+            body {
+                padding: 32px 156px 32px 156px;
+            }
+            main {
+                grid-gap: 63px;
+            }
+            #personal-information-container > h2, #greetings > h2 {
+                font-size: 1.87em;
+            }
+            #personal-information-container > h3, #greetings > h3 {
+                font-size: 1.45em;
+                line-height: 37.5px;
+            }
+            .normal-text {
+                font-size: 1.25em;
+            }
+            section {
+                padding-top: 30px;
+            }
+            #professional-summary {
+                margin-top: 30px;
+            }
+            #professional-summary > p {
+                text-indent: 1.5em;
+                line-height: 31px;
+                letter-spacing: .8px;
+            }
+            #location > span {
+                padding-left: 6.75px;
+                font-size: .86em;
+            }
+            #contact-information > ul > li > a {
+                font-size: 2.2em;
+            }
+            aside {
+                grid-template-rows: 3.17fr 1fr 0.5fr;
+            }
+            /* Temporary Changes */
+            #temp-header-ul > li > a {
+                padding: 0 6.5px 0 6.5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2></h2>
+        <ul id="temp-header-ul">
+            <!-- <li>
+                <span class="active-page normal-text">About</span>
+            </li> -->
+            <li>
+                <a class="normal-text" href="index.html">About</a>
+            </li>
+            <li>
+                <a class="normal-text normal" href="résumé.html">My Résumé</a>
+                <a class="normal-text abnormal" href="https://mhdr3a.github.io/files/AliAkbarAlavi_Mahdiyar_Résumé.pdf"><i class="fa fa-download"></i> Download My Résumé</a>
+            </li>
+            <!-- <li>
+                <a class="normal-text" href="research.html">Research</a>
+            </li>
+            <li>
+                <a class="normal-text" href="work.html">Work</a>
+            </li> -->
+        </ul>
+        <h2></h2>
+    </header>
+    <main>
+        <aside>
+            <div id="profile-picture-container">
+                <div id="profile-picture"></div>
+            </div>
+            <div id="personal-information-container">
+                <h2>Mahdiyar Ali Akbar Alavi</h2>
+                <h3>Electrical Engineering Graduate</h3>
+                <h3 id="location" class="normal-text"><i class="fa fa-map-marker"></i><span>Tehran, Iran</span></h3>
+            </div>
+            <div id="contact-information">
+                <ul>
+                    <li>
+                        <a class="envelope" href="mailto:mahdiyar.edu@gmail.com"><i class="fa fa-envelope"></i></a>
+                    </li>
+                    <li>
+                        <a class="github" href="https://github.com/mhdr3a"><i class="fa fa-github"></i></a>
+                    </li>
+                    <!-- <li>
+                        <a class="linkedin" href="https://www.linkedin.com/in/mahdiyar-alavi/"><i class="fa fa-linkedin-square"></i></a>
+                    </li> -->
+                    <li>
+                        <a class="skype" href="https://join.skype.com/invite/hdYuZiRHpXmh"><i class="fa fa-skype"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <span></span>
+        </aside>
+        <section>
+            <div id="greetings">
+                <h2>Hi there! &#128075;</h2>
+                <h3>I'm glad that you're here!</h3>
+            </div>
+            <div id="professional-summary">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7UQYuGbky3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li>
+                <a class="envelope" href="mailto:mahdiyar.edu@gmail.com"><i class="fa fa-envelope"></i></a>
+            </li>
+            <li>
+                <a class="github" href="https://github.com/mhdr3a"><i class="fa fa-github"></i></a>
+            </li>
+            <!-- <li>
+                <a class="linkedin" href="https://www.linkedin.com/in/mahdiyar-alavi/"><i class="fa fa-linkedin-square"></i></a>
+            </li> -->
+            <li>
+                <a class="skype" href="https://join.skype.com/invite/hdYuZiRHpXmh"><i class="fa fa-skype"></i></a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
