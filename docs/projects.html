@@ -159,7 +159,7 @@
             padding: 0 5px 0 5px;
         }
         #temp-header-ul > li > a.normal, #temp-header-ul > li > a.abnormal {
-            margin-left: 15px;
+            margin-left: 10px;
         }
         #temp-header-ul > li > a:hover {
             outline: 1px solid #666;
@@ -232,6 +232,10 @@
             aside {
                 grid-template-rows: 3.15fr 0.75fr 0.5fr 0.65fr;
             }
+            #professional-summary > iframe {
+                width: 410;
+                height: 230.625;
+            }
         }
 
         /* Smaller Screens */
@@ -253,10 +257,6 @@
                 margin-top: 10px;
                 display: flex;
                 justify-content: center;
-            }
-            #professional-summary > iframe {
-                width: 360;
-                height: 202.5;
             }
             #contact-information {
                 display: none;
@@ -301,6 +301,12 @@
         }
 
         @media screen and (max-width: 550px) {
+            #temp-header-ul {
+            justify-content: space-between;
+            }
+            #temp-header-ul > li > a.normal, #temp-header-ul > li > a.abnormal {
+                margin-left: 0;
+            }
             .normal {
                 display: none;
             }
@@ -319,10 +325,6 @@
             }
             #professional-summary {
                 margin-top: 5px;
-            }
-            #professional-summary > iframe {
-                width: 260;
-                height: 146.25;
             }
             #professional-summary > p {
                 letter-spacing: 0;
@@ -345,8 +347,8 @@
         }
         @media screen and (max-width: 450px) {
             #professional-summary > iframe {
-                width: 160;
-                height: 90;
+                width: 360;
+                height: 202.5;
             }
             #temp-header-ul > li > a.normal, #temp-header-ul > li > a.abnormal {
                 margin-left: 3px;
@@ -531,17 +533,19 @@
         </ul>
     </footer>
     <!-- Default Statcounter code for Education https://mhdr3a.github.io/ -->
-<script type="text/javascript">
-var sc_project=12814098; 
-var sc_invisible=1; 
-var sc_security="fbf55e23"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js" async></script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="https://statcounter.com/" target="_blank"><img class="statcounter"
-src="https://c.statcounter.com/12814098/0/fbf55e23/1/" alt="Web Analytics"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
+    <script type="text/javascript">
+        var sc_project=12814098; 
+        var sc_invisible=1; 
+        var sc_security="fbf55e23"; 
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+        <div class="statcounter">
+            <a title="Web Analytics" href="https://statcounter.com/" target="_blank">
+                <img class="statcounter" src="https://c.statcounter.com/12814098/0/fbf55e23/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade">
+            </a>
+        </div>
+    </noscript>
+    <!-- End of Statcounter Code -->
 </body>
 </html>
